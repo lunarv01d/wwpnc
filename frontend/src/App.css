@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(#9ed7ff, #eef8ff);
+  min-height: 100vh;
+}
+
+.plaza {
+  padding: 32px;
+}
+
+.title-area {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.title-area h1 {
+  margin: 0;
+  font-size: 48px;
+}
+
+.title-area p {
+  margin-top: 8px;
+  color: #444;
+}
+
+.notification-plaza {
+  min-height: 500px;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 32px;
+  padding: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.empty {
+  color: #555;
+  font-size: 20px;
+}
+
+.mii-card {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: bob 2.5s ease-in-out infinite;
+}
+
+.mii-head {
+  font-size: 48px;
+  background: white;
+  border-radius: 999px;
+  padding: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  margin-bottom: 12px;
+}
+
+.speech-bubble {
+  background: white;
+  border-radius: 20px;
+  padding: 16px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  position: relative;
+}
+
+.speech-bubble::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: white;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.speech-bubble p {
+  margin: 8px 0;
+}
+
+.speech-bubble span {
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+}
+
+@keyframes bob {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
